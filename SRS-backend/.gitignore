@@ -1,0 +1,16 @@
+# Ignore environment files
+.env
+
+# Node modules (if you're using Node.js)
+node_modules/
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+*.swp
