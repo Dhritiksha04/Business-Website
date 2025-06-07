@@ -5,15 +5,16 @@ const HeroSection = () => {
   return (
     <Box
       id="home"
+      component="section"
       sx={{
         height: '100vh',
         width: '100vw',
-        overflowX:'hidden',
+        overflow: 'hidden',
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
         position: 'relative',
-        overflow: 'hidden',
         margin: 0,
         padding: 0,
         '&::before': {
@@ -24,15 +25,17 @@ const HeroSection = () => {
           borderRadius: '50%',
           background: 'radial-gradient(circle, rgba(74, 20, 140, 0.1) 0%, rgba(74, 20, 140, 0) 70%)',
           top: '-300px',
-          right: '-150px'
-        }
+          right: '-150px',
+        },
       }}
     >
-      <Container maxWidth="lg" sx={{
-        width: '100%',
-        maxWidth: '100% !important',
-        px: { xs: 2, sm: 3, md: 4 }
-      }}>
+      <Container
+        maxWidth="lg"
+        sx={{
+          width: '100%',
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={12} md={6}>
             <Typography
@@ -43,10 +46,18 @@ const HeroSection = () => {
                 fontWeight: 700,
                 lineHeight: 1.2,
                 mb: 3,
-                fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem' }
+                fontSize: {
+                  xs: '2.3rem',
+                  sm: '3rem',
+                  md: '3.5rem',
+                  lg: '3.8rem',
+                },
               }}
             >
-              Welcome to <Box component="span" sx={{ color: 'secondary.dark' }}>Shree Radhe Services</Box>
+              Welcome to{' '}
+              <Box component="span" sx={{ color: 'secondary.dark', display: 'block' }}>
+                Shree Radhe Services
+              </Box>
             </Typography>
             <Typography
               variant="h5"
@@ -56,12 +67,12 @@ const HeroSection = () => {
                 color: 'text.secondary',
                 mb: 4,
                 maxWidth: '500px',
-                fontSize: { xs: '1.1rem', sm: '1.25rem' }
+                fontSize: { xs: '1.05rem', sm: '1.2rem', md: '1.3rem' },
               }}
             >
               Quality Services You Can Trust
             </Typography>
-            <Box sx={{ display: 'flex', gap: 2 }}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
               <Button
                 variant="contained"
                 color="secondary"
@@ -69,7 +80,7 @@ const HeroSection = () => {
                 href="#services"
                 sx={{
                   borderRadius: '50px',
-                  boxShadow: '0 4px 20px rgba(98, 45, 158, 0.72)'
+                  boxShadow: '0 4px 20px rgba(98, 45, 158, 0.72)',
                 }}
               >
                 Explore Services
@@ -83,15 +94,21 @@ const HeroSection = () => {
                   borderRadius: '50px',
                   borderWidth: '2px',
                   '&:hover': {
-                    borderWidth: '2px'
-                  }
+                    borderWidth: '2px',
+                  },
                 }}
               >
                 Contact Us
               </Button>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
+
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ display: { xs: 'none', md: 'block' } }}
+          >
             <Box
               sx={{
                 width: '100%',
@@ -107,10 +124,11 @@ const HeroSection = () => {
                   width: '300px',
                   height: '300px',
                   borderRadius: '50%',
-                  background: 'radial-gradient(circle, rgba(233,69,96,0.3) 0%, rgba(233,69,96,0) 70%)',
+                  background:
+                    'radial-gradient(circle, rgba(233,69,96,0.3) 0%, rgba(233,69,96,0) 70%)',
                   bottom: '-100px',
-                  right: '-100px'
-                }
+                  right: '-100px',
+                },
               }}
             />
           </Grid>
